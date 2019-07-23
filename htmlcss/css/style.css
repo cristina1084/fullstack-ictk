@@ -8,3 +8,10 @@ body{
 h2{
     color: #e74c3c;
 }
+
+.div1{
+
+    border: 5px solid #7ed6df;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
