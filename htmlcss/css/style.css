@@ -1,8 +1,9 @@
 .pcolor{
-    color:#2e86de;
+    color:#ad07fa;
 }
 body{
-    background: #d48f34;
+    /* background: #d48f34; */
+    background: url('../image2.jpg');
 }
 h2{
     color: #e74c3c;
