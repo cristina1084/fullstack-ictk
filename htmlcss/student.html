@@ -8,44 +8,100 @@
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function submitData(){
+            var name = document.getElementById("name").value;
+            var branch = document.getElementById("branch").value;
+            var gender;
+            if (document.getElementById("male").checked){
+                gender = document.getElementById("male").value;
+            }
+            else if (document.getElementById("female").checked){
+                gender = document.getElementById("female").value;
+            }
+            var dob = document.getElementById("dob").value;
+            var age = document.getElementById("age").value;
+            document.getElementById("td1").innerHTML = name;
+            document.getElementById("td2").innerHTML = branch;
+            document.getElementById("td3").innerHTML = dob;
+            document.getElementById("td4").innerHTML = age;
+            document.getElementById("td5").innerHTML = gender;
+        }
+        </script>
 </head>
 <body>
-    <table class="table">
-        <tr>
-            <td> Name </td>
-            <td> <input type="text" class="form-control"> </td>
-        </tr>
-        <tr>
-            <td> Branch </td>
-            <td>
-                <select name="" id="" class="form-control">
-                    <option value="cs">Computer Science</option>
-                    <option value="ee">Electrical</option>
-                    <option value="ec">Electronics</option>
-                </select> 
-            </td>
-        </tr>
-        <tr>
-            <td> Date of Birth </td>
-            <td> <input type="date" name="" id="" class="form-control"> </td>
-        </tr>
-        <tr>
-            <td> Age </td>
-            <td> <input type="number" min="0" max="80" class="form-control"> </td>
-        </tr>
-        <tr>
-            <td> Gender </td>
-            <td> <input type="radio" name="gender" id="" > Male  <input type="radio" name="gender" id=""> Female </td>
-        </tr>
-        <tr>
-            <td> <input type="checkbox" name="" id=""> </td>
-            <td> I agree to the terms and conditions </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> <button type="submit" class="btn btn-primary"> Submit </button> </td>
-            <!-- btn-success, warning, info, danger-->
-        </tr>
-    </table>
+    <div class="container">
+        <br> <br>
+        <div class="row">
+            <div class="col col-12 col-sm-6">
+                <div class="card">
+                    <h5 class="card-header text-center"> Student Details</h5>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td> Name </td>
+                                <td> <input type="text" class="form-control" id="name"> </td>
+                            </tr>
+                            <tr>
+                                <td> Branch </td>
+                                <td>
+                                    <select name="" id="branch" class="form-control">
+                                        <option value="Computer Science`">Computer Science</option>
+                                        <option value="Electrical">Electrical</option>
+                                        <option value="Electronics">Electronics</option>
+                                    </select> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Date of Birth </td>
+                                <td> <input type="date" name="" id="dob" class="form-control" value=""> </td>
+                            </tr>
+                            <tr>
+                                <td> Age </td>
+                                <td> <input type="number" id="age" min="0" max="80" class="form-control"> </td>
+                            </tr>
+                            <tr>
+                                <td> Gender </td>
+                                <td> <input type="radio" name="gender" id="male" value="Male" > Male  <input type="radio" name="gender" id="female" value="Female"> Female </td>
+                            </tr>
+                            <tr>
+                                <td> <input type="checkbox" name="" id=""> </td>
+                                <td> I agree to the terms and conditions </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td> <button type="button" class="btn btn-primary" onclick="submitData()"> Submit </button> </td>
+                                <!-- btn-success, warning, info, danger-->
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">Student Data</h5>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td id="td1"></td>
+                            </tr>
+                            <tr>
+                                <td id="td2"></td>
+                            </tr>
+                            <tr>
+                                <td id="td3"></td>
+                            </tr>
+                            <tr>
+                                <td id="td4"></td>
+                            </tr>
+                            <tr>
+                                <td id="td5"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
