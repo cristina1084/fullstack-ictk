@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Name</title>
+
+    <!-- Inline scripting-->
+    <script>       
+        function getName(){  //function definition 
+            var n = document.getElementById("name").value;  //DOM -> Document Object Model
+            document.getElementById("display").innerHTML = n;  //Inner HTML property
+            //alert(n) //pop-up
+            //console.log(n)
+            //console.log("Hello World!")
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-sm-6">
+                <form action="">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td> Enter your name: </td>
+                            <td> <input type="text" id="name" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>                                     <!--click event : function call-->
+                            <td><button type="button" class="btn btn-success" onclick="getName()"> Submit </button></td>
+                        </tr>
+                        <tr>
+                            <td> <p id="display"></p> </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
