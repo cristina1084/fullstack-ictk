@@ -56,7 +56,7 @@
                 document.getElementById("result").innerHTML = " ";
             }
             else{
-                document.getElementById("result").innerHTML = n3;
+                document.getElementById("result").innerHTML = "<b>"+n3+"</b>"; //can add html tags
             } 
             
         }
@@ -84,6 +84,7 @@
                                     <td> Operation </td>
                                     <td>
                                         <select name="" id="operation" class="form-control" onchange="arithmetic()">
+                                            <option value=""> Select operation </option>
                                             <option value="+"> Addition </option>
                                             <option value="-"> Subtraction </option>
                                             <option value="*"> Multiplication</option>
