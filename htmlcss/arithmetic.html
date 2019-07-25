@@ -9,27 +9,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script>
+        function add(a,b){
+            var c = a + b;
+            return c;
+        }
+        function sub(a,b){
+            var c = a - b;
+            return c
+        }
+        function mul(a,b){
+            var c = a * b;
+            return c;
+        }
+        function div(a,b){
+            var c = a / b;
+            return c;
+        }
         function arithmetic(){
             var n1 = parseFloat(document.getElementById("num1").value);
             var n2 = parseFloat(document.getElementById("num2").value);
             var n3;
             var o = document.getElementById("operation").value;
             
-            if(o == "+"){
-                n3 = n1 + n2;
+           if(o == "+"){
+                //n3 = n1 + n2;
+                n3 = add(n1, n2);
             }
             else if (o == "-"){
-                n3 = n1 - n2;
+                //n3 = n1 - n2;
+                n3 = sub(n1, n2);
             }
             else if (o == "*"){
-                n3 = n1 * n2;
+                //n3 = n1 * n2;
+                n3 = mul(n1, n2);
             }
             else if (o == "/"){
                 if (n2==0){
                     alert("Division by zero not possible");
                 }
                 else{
-                    n3 = n1/n2;
+                    //n3 = n1/n2;
+                    n3 = div(n1, n2)
                 }
             }
             if (o == "/" && n2 == 0){
@@ -37,7 +57,7 @@
             }
             else{
                 document.getElementById("result").innerHTML = n3;
-            }
+            } 
             
         }
     </script>
@@ -63,7 +83,7 @@
                                 <tr>
                                     <td> Operation </td>
                                     <td>
-                                        <select name="" id="operation" class="form-control">
+                                        <select name="" id="operation" class="form-control" onchange="arithmetic()">
                                             <option value="+"> Addition </option>
                                             <option value="-"> Subtraction </option>
                                             <option value="*"> Multiplication</option>
@@ -71,10 +91,10 @@
                                         </select>
                                     </td>
                                 </tr>
-                                <tr>
+                                <!--<tr>
                                     <td></td>
                                     <td><button type="button" class="btn btn-primary" onclick="arithmetic()"> SUBMIT </button></td>
-                                </tr>
+                                </tr>-->
                                 <tr>
                                     <td> Result </td>
                                     <td id="result" class="text-success"> </td>
