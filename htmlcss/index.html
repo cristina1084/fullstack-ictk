@@ -7,21 +7,59 @@
     <title>Login</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function login(){
+            var u = document.getElementById("uname").value;
+            var p = document.getElementById("pwd").value;
+            document.getElementById("td1").innerHTML = u;
+            document.getElementById("td2").innerHTML = p;
+        }
+    </script>
 </head>
 <body>
-    <table class="table">
-        <tr>
-            <td>Username</td>
-            <td><input type="text"/></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password"/></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button>Login</button></td>
-        </tr>
-    </table>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-12 col-sm-6">
+                <div class="card">
+                    <h5 class="card-header"> Login </h5>
+                    <div class="card-body">
+                        <form action="">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td>Username</td>
+                                    <td><input type="text" id="uname"></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" id="pwd"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button type="button" class="btn btn-primary" onclick="login()">Login</button></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <h5 class="card-header">Display</h5>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td id="td1"> </td>
+                            </tr>
+                            <tr>
+                                <td id="td2"> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
