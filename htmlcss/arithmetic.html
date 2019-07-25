@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arithmetic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function arithmetic(){
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var n3;
+            var o = document.getElementById("operation").value;
+            
+            if(o == "+"){
+                n3 = n1 + n2;
+            }
+            else if (o == "-"){
+                n3 = n1 - n2;
+            }
+            else if (o == "*"){
+                n3 = n1 * n2;
+            }
+            else if (o == "/"){
+                if (n2==0){
+                    alert("Division by zero not possible");
+                }
+                else{
+                    n3 = n1/n2;
+                }
+            }
+            if (o == "/" && n2 == 0){
+                document.getElementById("result").innerHTML = " ";
+            }
+            else{
+                document.getElementById("result").innerHTML = n3;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-12 col-sm-12">
+                <div class="card">
+                    <h5 class="card-header"> Arithmetic </h5>
+                    <div class="card-body">
+                        <form>
+                            <table class="table table-borderless"> 
+                                <tr>
+                                    <td> Number 1 </td>
+                                    <td><input type="number" id="num1" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td> Number 2 </td>
+                                    <td><input type="number" id="num2" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td> Operation </td>
+                                    <td>
+                                        <select name="" id="operation" class="form-control">
+                                            <option value="+"> Addition </option>
+                                            <option value="-"> Subtraction </option>
+                                            <option value="*"> Multiplication</option>
+                                            <option value="/"> Division</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button type="button" class="btn btn-primary" onclick="arithmetic()"> SUBMIT </button></td>
+                                </tr>
+                                <tr>
+                                    <td> Result </td>
+                                    <td id="result" class="text-success"> </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
