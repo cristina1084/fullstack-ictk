@@ -18,12 +18,14 @@
         $('#p1').css("background-color","yellow");  //manipulate css
     });
 }); */
-
+var i = 0;
 $(document).ready(function(){
     $("#btn1").click(function(){
        // $("#p1").toggle();           //toggle btwn hiding & showing , can add delay
-        var y = $("#ip").val();       //to read input value
-        console.log(y);
+        //var y = $("#ip").val();       //to read input value
+        //console.log(y);
+        $("#p1").text("You clicked me " + i +" times");  //display value
+        i++;
         
     });
 });
