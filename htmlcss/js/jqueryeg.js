@@ -7,12 +7,21 @@
     });
 }); */
 
-$(document).ready( function(){
-    $('#btn1').click(function(){
-        $("#p1").show();
+/* $(document).ready( function(){
+    $('#btn1').click(function(){   //dblclick() --> for double click
+        $("#p1").show(10000);  //set time delay
     });
     $('#btn2').click(function(){
         $('#p1').hide();
+    });
+    $('#p1').mouseenter(function(){
+        $('#p1').css("background-color","yellow");  //manipulate css
+    });
+}); */
+
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#p1").toggle();           //toggle btwn hiding & showing , can add delay
     });
 });
 
