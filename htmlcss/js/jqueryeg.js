@@ -21,7 +21,10 @@
 
 $(document).ready(function(){
     $("#btn1").click(function(){
-        $("#p1").toggle();           //toggle btwn hiding & showing , can add delay
+       // $("#p1").toggle();           //toggle btwn hiding & showing , can add delay
+        var y = $("#ip").val();       //to read input value
+        console.log(y);
+        
     });
 });
 
