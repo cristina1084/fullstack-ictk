@@ -18,7 +18,7 @@
         $('#p1').css("background-color","yellow");  //manipulate css
     });
 }); */
-var i = 0;
+var i = 1;
 $(document).ready(function(){
     $("#btn1").click(function(){
        // $("#p1").toggle();           //toggle btwn hiding & showing , can add delay
@@ -26,6 +26,9 @@ $(document).ready(function(){
         //console.log(y);
         $("#p1").text("You clicked me " + i +" times");  //display value
         i++;
+        if(i==11){
+            $("#btn1").prop("disabled","true");  //button property
+        }
         
     });
 });
