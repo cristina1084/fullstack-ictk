@@ -16,7 +16,7 @@ function sendMessage1(){
 function sendMessage2(msg,callback){
     setTimeout(()=>{
         messages.push(msg);
-        callback();
+        callback();   //callback
     },2000) 
 }
 
