@@ -1,11 +1,11 @@
 var mypromise = new Promise((resolve,reject)=>{
     var grade = "A+";
-    if(grade == "A") resolve();
+    if(grade == "A") resolve();  //can pass arguments
     else reject();
 
 });
 
-mypromise.then(()=>{
+mypromise.then(()=>{                //receive values
     console.log("Promise Resolved");
     
 })
